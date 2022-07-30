@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Estilos de texto</title>
+    
+        <style type="text/css">
+
+            #conteudo {
+                /*border: 15px groove red;*/
+                border-color: red green yellow blue;
+                border-width: 15px;
+                border-style: outset;
+                
+            }
+
+            body{
+                font-size: 40px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+
+            .texto{
+                /*
+                    px -> tamanho fixo
+                    % -> tamanho relativo
+                    em -> tamanho relativo ao container pai
+                
+                */
+                font-size: 2em;
+            }
+
+            .negrito{
+                /*normal, bold , 100 até 900*/
+                font-weight: 900;
+            }
+
+            .italico{
+                text-decoration: line-through;
+            }
+
+            .texto{
+                font: bold 40px 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+        </style>
+    
+    </head>
+    <body>
+        <div>
+            <p class="negrito">Texto negrito</p>
+            <p class="italico">Texto itálico</p>
+            <p class="formatacao">Formatação de texto</p>
+            <p class="texto">Texto</p>
+        </div>
+        
+    </body>
+</html>
