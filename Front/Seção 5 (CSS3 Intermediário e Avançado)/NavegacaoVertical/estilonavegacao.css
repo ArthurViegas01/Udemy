@@ -1,0 +1,43 @@
+/* ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+li{
+    padding: 5px 20px;
+    background:url(../ImagensSecao5/seta.png) no-repeat left center;
+
+} */
+
+ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul a{
+    color: #000;
+    text-decoration: none;
+    text-indent: 40px;
+    line-height: 40px;
+    height: 40px;
+    width: 200px;
+    display: block;
+    background: #f7b600 url(../ImagensNavVertical/men.png) no-repeat;
+}
+
+a:hover, .selecionado a{
+    color: #FFF;
+    background-position: right bottom;
+    background-color: #f99200;
+}
+
+#home #navegacao .home a,
+#sobre #navegacao .sobre a,
+#servicos #navegacao .servicos a{
+    color: #FFF;
+    background-position: right bottom;
+    background-color: #f99200;
+}
+
