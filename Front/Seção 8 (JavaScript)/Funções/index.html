@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Operadores aritméticos</title>
+    <script>
+
+        function calcularAreaTerreno(largura, comprimento){
+
+            var area = largura * comprimento;
+            return area;
+
+        }
+        
+        var largura = prompt('Digite a largura do terreno');
+        var comprimento = prompt('Digite o comprimento do terreno');
+
+        document.write('A area do terreno é de: ' + calcularAreaTerreno(largura,comprimento));
+
+        //Nota
+        // Se eu passar mais ou menos argumentos para uma função, o programa executa, mas o erro aparece depois, o programa ou desconsiderará os argumentos extras, ou deixará undefined os argumentos faltando.
+
+        var exibirSaudacao = function(nome) {
+            document.write('Olá'+ nome +', tudo bem?');
+        }
+
+        exibirSaudacao('Jorge');
+
+        
+    </script>
+
+    
+</head>
+    <body>
+    </body>
+</html>
