@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Array Multidimensional (Matriz)</title>
+    <script>
+      var lista_coisas = Array();
+
+      lista_coisas['frutas'] = Array();
+      lista_coisas['sla mano inventa algo'] = [];
+
+
+      lista_coisas['frutas'][0] = 'Banana';
+      lista_coisas['frutas'][1] = 'Maça';
+      lista_coisas['frutas'][2] = 'Uva';
+
+      lista_coisas['sla mano inventa algo'][0] = 'Derby';
+      lista_coisas['sla mano inventa algo'][1] = 'Manguaça';
+      lista_coisas['sla mano inventa algo'][2] = 'Jogo do Bicho';
+
+      //Adicionar item no final do array
+      lista_coisas['frutas'].push('Toranja');
+
+      //Adicionar item no começo do array
+      lista_coisas['frutas'].unshift('Michael Bay');
+
+      //Excluir item no final do array
+      //lista_coisas['frutas'].pop
+
+      //Excluir item no começo do array
+      //lista_coisas['frutas'].shift();
+
+      if(lista_coisas['frutas'].indexOf('Uva') === -1){
+        console.log('Ta biruta, tem nada aqui não')
+      }else{
+        console.log('Nunca errou, o que tu quer ta na posição ' + lista_coisas['frutas'].indexOf('Uva'))
+      }
+
+      console.log(lista_coisas)
+    </script>
+  </head>
+
+  <body></body>
+</html>

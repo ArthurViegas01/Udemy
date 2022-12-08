@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Datas</title>
+    <script>
+      
+      function acao0(){
+        alert('Evento disparado')
+      }
+
+      function acao1(){
+        alert('Entrei')
+      }
+
+      function acao2(){
+        alert('Sai')
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <div onclick="acao0()" style="background: gray; height: 150px; width:150px">
+    </div>
+    <div ondblclick="acao0()" style="background: #000; height: 150px; width:150px; margin-top: 10px;">
+    </div>
+    <div onmouseup="acao1()" style="background: red; height: 150px; width:150px; margin-top: 10px;">
+    </div>
+    <div onmouseover="acao1()" onmouseout="acao2()"  style="background: green; height: 150px; width:150px; margin-top: 10px;">
+    </div>
+    <div onmouseout="acao0()" style="background: blue; height: 150px; width:150px; margin-top: 10px;">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercício Fixação 2</title>
+    <script>
+      
+
+      function mudaFundo() {
+        document.getElementById('elementar').style.background = '#FFFF00';
+      }
+
+      function mudaFundo2() {
+        var numeroCaracteres = document.getElementById('elementar').value;
+        
+        if(numeroCaracteres.length < 3){
+          document.getElementById('elementar').style.background = '#FF0000';
+        }else {
+          
+          document.getElementById('elementar').style.background = '#00FF00';
+          
+        }        
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <input 
+    type="text" 
+    id="elementar"
+    onfocus="mudaFundo()"
+    onblur="mudaFundo2()"
+    >
+  </body>
+</html>

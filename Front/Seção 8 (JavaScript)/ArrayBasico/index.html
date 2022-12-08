@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Array Basico</title>
+    <script>
+      // var lista_frutas = Array();
+
+      // lista_frutas[1] = 'Banana'
+      // lista_frutas[2] = 'Maça'
+      // lista_frutas['x'] = 'Morango'
+      // lista_frutas[4] = 'Uva'
+
+      //var lista_frutas = Array('Banana','Maça','Morango','Uva');
+      //var lista_frutas = ['Banana','Maça','Morango','Uva'];
+
+      function soma(){
+        var resultado = 0;
+
+        for(var i in arguments){
+          resultado += arguments[i];
+        }
+        return resultado;
+      }
+
+      console.log(soma(7, 5, 3.2, 0.8, 'Texto'))
+    </script>
+  </head>
+
+  <body></body>
+</html>

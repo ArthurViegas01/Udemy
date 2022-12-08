@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercício de fixação 3</title>
+    <script>
+      var objetos = Array('Cadeira', 'Impressora', 'Garfo', 'Armário');
+      console.log(objetos)
+
+
+      function adicionaElemento(){
+        var ElementoNovo = document.getElementById('TextoUsuario').value;
+
+        if(ElementoNovo){
+          if(objetos.indexOf(ElementoNovo) === -1){
+            objetos.push(ElementoNovo);
+            console.log(objetos);
+            document.getElementById('TextoUsuario').value = '';
+          }else{
+            alert('Objeto já foi adicionado');
+            document.getElementById('TextoUsuario').value = '';
+          }
+          
+        }else{
+          alert('Informe um valor válido');
+        }
+        
+        
+      }
+
+      function ordenaElementos(){
+        console.log(objetos.sort())
+      }
+    </script>
+  </head>
+
+  <body>
+    <input type="text" id="TextoUsuario">
+    <button type="button" onclick="adicionaElemento()">Adicionar</button>
+    <button type="button" onclick="ordenaElementos()">Ordenar</button>
+  </body>
+</html>

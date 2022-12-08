@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Caneta azul</title>
+        <link rel="stylesheet" href="estilo.css">
+        <script src="Jogo.js"></script>
+    </head>
+
+    <body onresize="ajustaTamanhoPalcoJogo()">
+
+        <div class="painel">
+            <div class="vidas">
+                <img id="v1" src="imagens/coracao_cheio.png">
+                <img id="v2" src="imagens/coracao_cheio.png">
+                <img id="v3" src="imagens/coracao_cheio.png">
+            </div>
+            <div class="cronometro">
+                Tempo restante: <span id="cronometro"></span>
+            </div>
+        </div>
+
+        <script>
+            console.log(criaManoelTempo);
+            document.getElementById('cronometro').innerHTML = tempo;
+
+            posicaoRandomica()
+
+            var criaManoel = setInterval(function(){
+                posicaoRandomica()
+            },criaManoelTempo)
+        </script>
+    </body>
+</html>

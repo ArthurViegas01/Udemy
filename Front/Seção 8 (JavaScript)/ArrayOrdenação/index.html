@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Array Ordenação</title>
+    <script>
+      var lista_frutas = Array();
+
+      lista_frutas[1] = 'Banana'
+      lista_frutas[2] = 'Maça'
+      lista_frutas[3] = 'Morango'
+      lista_frutas[4] = 'Uva'
+      lista_frutas[5] = 'Abacaxi'
+
+      console.log(lista_frutas.sort())
+
+      var lista_numeros = Array();
+
+      lista_numeros[1] = 12
+      lista_numeros[2] = 40
+      lista_numeros[3] = 3
+      lista_numeros[4] = 7
+      lista_numeros[5] = 19
+      lista_numeros[6] = 1
+      lista_numeros[7] = 25
+      lista_numeros[8] = 34
+
+      console.log(lista_numeros.sort(ordenaNumeros))
+
+      function ordenaNumeros(a, b){
+        return a - b
+        // < 0 = a ordenado antes de b
+        // > 0 = b ordenado antes de a
+        // == a ordem é mantida
+      }
+
+    </script>
+  </head>
+
+  <body></body>
+</html>

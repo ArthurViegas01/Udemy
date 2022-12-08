@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BOM - Window</title>
+    <script>
+      var altura = window.screen.availHeight;
+      var largura = window.screen.availWidth;
+
+      document.write('A altura do navegador é: ' + altura + '<br>')
+      document.write('A altura do navegador é: ' + largura)
+      
+      //-----------------------------------------------------------
+
+      setTimeout(function() { console.log('Teste')},2000)
+
+      setInterval(function() { console.log('Teste 2')},2000)
+    </script>
+  </head>
+
+  <body>
+    <hr>
+    <button onclick="window.location.href='https://www.google.com'">Acessar Google</button>
+    <button onclick="window.location.href='https://www.linkedin.com/in/arthur-viegas-899083205/'">Acessar o melhor perfil do Linkedin do mundo</button>
+  </body>
+</html>

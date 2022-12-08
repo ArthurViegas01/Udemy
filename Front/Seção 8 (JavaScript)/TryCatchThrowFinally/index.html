@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercício de fixação 1</title>
+    <script>
+
+      
+
+      var video = Array();
+
+      video[1] = Array()
+      video[1]['nome'] = 'Fullmetal Alchemist'
+      video[1]['categoria'] = 'Anime'
+
+
+      function getVideo(video){
+
+
+        try{
+          console.log(video[0]['nome'])
+        }catch(erro){
+          console.log(erro)
+          console.log('Peguei o erro')
+          throw new Error('Deu erro? Deu, mas por sorte ta tudo certo');
+        }finally{
+          console.log('Fim do programa')
+        }
+
+
+
+
+      }
+
+      getVideo(video)
+
+
+
+    </script>
+  </head>
+
+  <body></body>
+</html>

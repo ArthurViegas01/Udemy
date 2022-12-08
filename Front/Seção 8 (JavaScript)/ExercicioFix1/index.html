@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercício de fixação 1</title>
+    <script>
+      var num1 = prompt("Digite o primeiro número");
+      var operacao = prompt("Digite a operação");
+      var num2 = prompt("Digite o segundo número");
+
+      num1 = parseInt(num1);
+      num2 = parseInt(num2);
+
+      document.write("O resultado é " + calculo(num1, num2, operacao));
+
+      function calculo(num1, num2, operacao) {
+        if (operacao == "soma") {
+          return (num1 + num2);
+        } else {
+          if (operacao == "subtração") {
+            return (num1 - num2);
+          }
+        }
+      }
+    </script>
+  </head>
+
+  <body></body>
+</html>
