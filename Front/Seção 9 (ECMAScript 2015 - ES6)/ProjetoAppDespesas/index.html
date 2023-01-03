@@ -20,8 +20,8 @@
 
   <body>
 
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-5">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
       <div class="container">
         <a class="navbar-brand" href="#">
            <img src="logo.png" width="50" height="35" alt="Orçamento pessoal">
@@ -46,20 +46,27 @@
 
     <div class="container">
       <div class="row">
-        <div class="col mb-5">
+        <div class="col mb-3">
           <h1 class="display-4">Registro de nova despesa</h1>
         </div>
       </div>
 
+      <!--Linha 1-->
+      <!---------------------------------------------------------------------------------->
       <div class="row mb-2">
-        <div class="col-md-2">
+        <div class="col-md-4">
           <select class="form-control" id="ano">
             <option value="">Ano</option>
             <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>            
           </select>
         </div>
 
-        <div class="col-md-2">
+        <div class="col-md-4">
           <select class="form-control" id="mes">
             <option value="">Mês</option>
             <option value="1">Janeiro</option>
@@ -77,11 +84,17 @@
           </select>
         </div>
         
-        <div class="col-md-2">
+        <div class="col-md-4">
           <input type="text" class="form-control" placeholder="Dia" id="dia" />
         </div>
 
-        <div class="col-md-6">
+      </div>
+
+      <!--Linha 2-->
+      <!---------------------------------------------------------------------------------->
+      <div class="row mb-2">
+
+        <div class="col-md-4">
           <select class="form-control" id="tipo">
             <option>Tipo</option>
             <option value="1">Alimentação</option>
@@ -91,24 +104,53 @@
             <option value="5">Transporte</option>
           </select>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-4">
           <input type="text" class="form-control" placeholder="Descrição" id="descricao" />
         </div>
 
-        <div class="col-md-2">
+        <div class="col-md-4">
           <input type="text" class="form-control" placeholder="Valor" id="valor" />
         </div>
+        
+      </div>
 
-        <div class="col-md-2 d-flex justify-content-end">
+      <!--Linha 3-->
+      <!---------------------------------------------------------------------------------->
+      <div class="row">
+        <div class="col-md-4">
           <button type="button" class="btn btn-primary" onclick="cadastrarDespesa()">
             <i class="fas fa-plus"></i>
           </button>
         </div>
       </div>
+
+      <!--Fim do container-->
     </div>
+
+    <!-- Modal -->
+    <!---------------------------------------------------------------------------------->
+    <div class="modal fade" id="modalRegistro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <div id="modalHeader">
+            <h5 class="modal-title" id="modalTitulo"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body" id="modalBody">
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" id="modalButton" data-dismiss="modal">Voltar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </body>	
 
 </html>
