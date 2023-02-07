@@ -2,8 +2,7 @@
     background: #dcdcdc;
     width: 100%;
     height: 400px;
-
-
+    
     display: flex;
 
     /*row | row-reverse | column | column-reverse
@@ -27,15 +26,13 @@
     border: 1px solid grey;
     margin: 10px;
     
-    /*Define proporção de espaço ocupado por um
-    item*/
+    /*Define proporção de espaço ocupado por um item*/
     flex-grow:0;
-    /*Define a capacidade de redução de tamanho
-    do item.*/
+
+    /*Define a capacidade de redução de tamanho do item.*/
     flex-shrink:1;
 
-    /*Indicao tamanho inicial do flex item antes
-    da distribuição do espaço restante.*/
+    /*Indicao tamanho inicial do flex item antes da distribuição do espaço restante.*/
     flex-basis:100px;
 }
 
