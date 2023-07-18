@@ -1,0 +1,110 @@
+<div class="container mt-5">
+	<div class="row pt-2">
+
+		<div class="col-md-3">
+
+			<ul class="list-group">
+				<li class="list-group-item"><a href="/timeline" class="text-decoration-none"><i class="bi bi-house"></i> Página Inicial</a></li>
+				<li class="list-group-item"><i class="bi bi-search"></i> Explorar</li>
+				<li class="list-group-item"><i class="bi bi-bell"></i> Notificações</li>
+				<li class="list-group-item"><i class="bi bi-envelope"></i> Mensagens</li>
+				<li class="list-group-item"><i class="bi bi-file-text"></i> Listas</li>
+				<li class="list-group-item"><i class="bi bi-bookmark"></i> Itens salvos</li>
+				<li class="list-group-item"><i class="bi bi-patch-check"></i> Verificadas</li>
+				<li class="list-group-item"><i class="bi bi-person"></i> Perfil</li>
+				<li class="list-group-item"><i class="bi bi-chat-dots"></i> Mais</li>
+				<li class="list-group-item"><a class="text-decoration-none" href="/sair"><i class="bi bi-x-octagon"></i> Sair</a></li>
+				<li class="list-group-item">
+					<button class="btn p-0" id="theme-switcher">
+						<i class="bi bi-brightness-high-fill"></i> Alterar Tema
+					</button>
+				</li>
+			</ul>
+
+
+
+		</div>
+
+		<div class="col-md-6">
+
+			<div class="row mb-2">
+				<div class="col">
+					<div class="card">
+						<div class="card-body">
+							<form method="get" action="/quem_seguir">
+								<div class="input-group mb-3">
+									<input type="text" name="pesquisarPor" class="form-control" placeholder="Quem você está procurando?">
+									<div class="input-group-append">
+										<button class="btn btn-primary" type="submit">Procurar</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<?php foreach ($this->view->usuarios as $indice_arr => $usuario) { ?>
+				<div class="row mb-2">
+					<div class="col">
+						<div class="card">
+							<div class="card-body">
+								<div class="row">
+									<div class="col-md-6">
+										<?= $usuario['nome'] ?>
+									</div>
+
+									<div class="col-md-6 d-flex justify-content-end">
+										<div>
+											<?php if ($usuario['seguindo_sn'] == 0) { ?>
+												<a href="/acao?acao=seguir&id_usuario=<?= $usuario['id'] ?>" class="btn btn-success">Seguir</a>
+											<?php } ?>
+
+											<?php if ($usuario['seguindo_sn'] == 1) { ?>
+												<a href="/acao?acao=deixar_de_seguir&id_usuario=<?= $usuario['id'] ?>" class="btn btn-danger">Deixar de seguir</a>
+											<?php } ?>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<?php } ?>
+		</div>
+
+		<div class="col-md-3">
+			<div class="perfil border rounded">
+
+				<div class="perfilPainel">
+
+					<div class="row mt-2 mb-2">
+						<div class="col mb-2">
+							<span class="perfilPainelNome">Nome do Usuário</span>
+						</div>
+					</div>
+
+					<div class="row mb-2">
+
+						<div class="col">
+							<span class="perfilPainelItem">Tweets</span><br />
+							<span class="perfilPainelItemValor">0</span>
+						</div>
+
+						<div class="col">
+							<span class="perfilPainelItem">Seguindo</span><br />
+							<span class="perfilPainelItemValor">0</span>
+						</div>
+
+						<div class="col">
+							<span class="perfilPainelItem">Seguidores</span><br />
+							<span class="perfilPainelItemValor">0</span>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
